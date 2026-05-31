@@ -46,7 +46,7 @@ def find_historical_match(df: pd.DataFrame, window_size: int = 30, top_n: int = 
         hist_norm = normalize_series(hist_window)
         
         # Calculate Dynamic Time Warping distance
-        distance, path = fastdtw(current_norm, hist_norm)
+        distance, path = fastdtw(current_norm, hist_norm, dist=lambda a, b: abs(a - b))
         
         start_date = df.index[i]
         end_date = df.index[i + window_size - 1]
