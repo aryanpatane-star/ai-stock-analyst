@@ -1,0 +1,10 @@
+yfinance
+pandas
+numpy
+plotly
+streamlit
+fastdtw
+scipy
+google-generativeai
+requests
+beautifulsoup4
